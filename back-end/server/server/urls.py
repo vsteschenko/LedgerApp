@@ -6,7 +6,8 @@ from ledger.views import UserViewSet, TransactionViewSet, SignupView, LoginView
 
 router = routers.DefaultRouter()
 router.register(r'users', UserViewSet)
-router.register(r'txs', TransactionViewSet)
+# router.register(r'txs', TransactionViewSet)
+router.register(r'txs', TransactionViewSet, basename='transaction')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
